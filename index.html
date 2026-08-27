@@ -4,119 +4,353 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Комплекс отдыха «ЛЕС» в Перми — тёплые беседки, спорт и активный отдых для детей и взрослых круглый год.">
+  <meta name="theme-color" content="#fcfcfa">
   <title>ЛЕС — комплекс отдыха в Перми</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header class="header" id="top">
-    <a class="logo" href="#top" aria-label="ЛЕС, на главную"><span>ЛЕС</span><small>комплекс отдыха</small></a>
-    <nav class="nav" aria-label="Главная навигация">
-      <a href="#activities">Чем заняться</a><a href="#gazebos">Беседки</a><a href="#prices">Цены</a><a href="#contacts">Как добраться</a>
-    </nav>
-    <div class="header-actions"><a class="header-phone" href="tel:+73422030214">+7 (342) 203-02-14</a><a class="header-book" href="tel:+73422030214">Забронировать</a></div>
-    <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="ЛЕС, на главную"><span>ЛЕС</span><small>комплекс отдыха</small></a>
+      <nav class="nav" id="nav" aria-label="Главная навигация">
+        <a href="#activities">Чем заняться</a>
+        <a href="#gazebos">Беседки</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Как добраться</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+73422030214">+7 (342) 203-02-14</a>
+        <a class="header-book" href="tel:+73422030214">Забронировать</a>
+      </div>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><i></i></button>
+    </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
-      <div class="hero-copy-panel">
-        <p class="hero-kicker"><span></span>Природа · уют · активный отдых</p>
-        <h1>Комплекс<br>отдыха <em>«ЛЕС»</em></h1>
-        <p class="hero-copy">Не просто беседки. Полноценный отдых на природе для всей семьи — с активностями, спортом и атмосферой настоящего леса.</p>
-        <div class="hero-features" aria-label="Возможности комплекса"><span><b>⌂</b>Беседки<br>для компаний</span><span><b>♧</b>Семейный<br>отдых</span><span><b>↟</b>Активности<br>круглый год</span></div>
-        <div class="hero-actions"><a class="button button-dark" href="#gazebos">Смотреть беседки</a><a class="button button-light" href="#activities">Как отдохнуть в ЛЕС</a></div>
+      <div class="container hero__inner">
+        <div class="hero-copy-panel">
+          <p class="hero-kicker"><span></span>Природа · уют · активный отдых</p>
+          <h1>Комплекс отдыха <em>«ЛЕС»</em></h1>
+          <p class="hero-copy">Не просто беседки. Полноценный отдых на природе для всей семьи — с активностями, спортом и атмосферой настоящего леса.</p>
+          <div class="hero-features" aria-label="Возможности комплекса">
+            <span><b>⌂</b>Беседки для компаний</span>
+            <span><b>✿</b>Семейный отдых</span>
+            <span><b>↟</b>Активности круглый год</span>
+          </div>
+          <div class="actions">
+            <a class="button button-primary" href="#gazebos">Смотреть беседки</a>
+            <a class="button button-ghost" href="#activities">Как отдохнуть в ЛЕС</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-main-image" src="assets/images/les-01.webp" width="1280" height="720" alt="Деревянные беседки и дорожки среди деревьев комплекса ЛЕС">
+          <div class="hero-place"><span>Пермь</span><strong>Черняевский лес</strong></div>
+          <div class="hero-thumbs">
+            <img src="assets/images/les-03.webp" width="960" height="1280" loading="lazy" alt="Тёплая беседка зимой">
+            <img src="assets/images/les-05.webp" width="1280" height="720" loading="lazy" alt="Терраса беседки среди леса">
+            <img src="assets/images/les-02.webp" width="1280" height="960" loading="lazy" alt="Комплекс ЛЕС вечером">
+          </div>
+        </div>
       </div>
-      <div class="hero-visual">
-        <img class="hero-main-image" src="assets/images/les-01.webp" alt="Деревянные беседки и дорожки среди деревьев комплекса ЛЕС">
-        <div class="hero-place"><span>Пермь</span><strong>Черняевский лес</strong></div>
-        <div class="hero-thumbs"><img src="assets/images/les-03.webp" alt="Тёплая беседка зимой"><img src="assets/images/les-05.webp" alt="Терраса беседки среди леса"><img src="assets/images/les-02.webp" alt="Комплекс ЛЕС вечером"></div>
-      </div>
-      <div class="hero-facts"><div><b>Для всей семьи</b><span>Уютно детям и взрослым</span></div><div><b>На природе</b><span>Лес, воздух и тишина</span></div><div><b>Круглый год</b><span>Летом и зимой есть чем заняться</span></div><div><b>В черте Перми</b><span>Не нужно уезжать из города</span></div></div>
-    </section>
-
-    <section class="intro section" id="activities">
-      <div class="section-heading"><p class="eyebrow dark">Ваш день в лесу</p><h2>Приезжайте<br>за своим отдыхом</h2><p>Не нужно выбирать между природой, движением и комфортом. Здесь всё становится частью одного дня.</p></div>
-      <div class="scenario-grid">
-        <a class="scenario scenario-main" href="#gazebos"><span class="scenario-media"><img src="assets/images/les-05.webp" alt="Беседка с открытой террасой"></span><span class="scenario-body"><small>Тепло в любую погоду</small><strong>Отдохнуть<br>в беседке</strong><b>→</b></span></a>
-        <article class="scenario"><span class="scenario-media"><img src="assets/images/les-hero.webp" alt="Лесная поляна для отдыха с детьми"></span><span class="scenario-body"><small>Лес, поляна и свобода</small><strong>Приехать<br>с детьми</strong></span></article>
-        <article class="scenario"><span class="scenario-media"><img src="assets/images/les-01.webp" alt="Дорожки комплекса среди леса"></span><span class="scenario-body"><small>Летом и зимой</small><strong>Покататься<br>и поиграть</strong></span></article>
-        <article class="scenario"><span class="scenario-media"><img src="assets/images/les-04.webp" alt="Угощение для праздника в беседке"></span><span class="scenario-body"><small>До 25 человек</small><strong>Провести<br>праздник</strong></span></article>
-      </div>
-    </section>
-
-    <section class="more section">
-      <div class="more-photo"><img src="assets/images/les-02.webp" alt="Комплекс ЛЕС вечером в городской среде"><span>Лес рядом.<br>Город тоже.</span></div>
-      <div class="more-content"><p class="eyebrow">Больше, чем беседки</p><h2>От утра<br>до тёплого вечера</h2><p>Начните с прогулки, сыграйте в футбол, прокатитесь по лесным дорожкам. Дети успеют набегаться на поляне, а вечером вся компания соберётся за одним столом.</p><ul><li>Территория в Черняевском лесу</li><li>Активности для детей и взрослых</li><li>Тёплые беседки со своей террасой</li></ul></div>
-    </section>
-
-    <section class="seasons section">
-      <div class="section-heading compact"><p class="eyebrow dark">Два сезона — один ЛЕС</p><h2>Двигайтесь.<br>Останавливайтесь.<br>Возвращайтесь.</h2></div>
-      <div class="season-cards">
-        <article class="season summer"><img src="assets/images/les-01.webp" alt="Летние дорожки и беседки комплекса ЛЕС"><div><small>Май — октябрь</small><h3>Летом</h3><p>Велосипеды, футбольное поле, прогулки, пруд и долгие вечера на террасе.</p></div></article>
-        <article class="season winter"><img src="assets/images/les-03.webp" alt="Тёплая беседка зимой"><div><small>Ноябрь — апрель</small><h3>Зимой</h3><p>Беговые лыжи, коньки, каток и тёплая беседка после прогулки.</p></div></article>
-      </div>
-    </section>
-
-    <section class="family section">
-      <div class="family-text"><p class="eyebrow dark">С детьми</p><h2>Можно шуметь,<br>бегать и исследовать</h2><p>Рядом лес и большая поляна — детям есть где двигаться, играть и придумывать свои маршруты. Взрослые остаются рядом, на тёплой террасе.</p></div>
-      <div class="family-photo"><img src="assets/images/les-hero.webp" alt="Зелёная поляна и лес комплекса ЛЕС"></div>
-      <blockquote class="family-quote">«Рядом лес, есть поляна, где могут побегать дети»<cite>Отзыв гостя на Яндекс Картах</cite></blockquote>
-    </section>
-
-    <section class="gazebos section" id="gazebos">
-      <div class="section-heading"><p class="eyebrow dark">Тёплые беседки</p><h2>Своя точка<br>на карте ЛЕСа</h2><p>Закрытая тёплая зона, отдельная терраса и мангал. До 25 гостей — для семейного дня, праздника или встречи с друзьями.</p></div>
-      <div class="gazebo-cards">
-        <article class="gazebo-card"><div class="gazebo-card-photo"><img src="assets/images/les-05.webp" alt="Беседка номер 1 с открытой террасой"></div><div class="gazebo-card-content"><div class="gazebo-card-head"><span>Беседка 01</span><strong>До 25 гостей</strong></div><h3>Для большой компании</h3><p>Тёплая закрытая зона и просторная терраса для долгого отдыха в лесу.</p><div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div><p class="gazebo-inside"><b>Внутри:</b> столы, лавки, раковина, холодильник и чайник</p><a href="tel:+73422030214">Узнать свободное время <b>→</b></a></div></article>
-        <article class="gazebo-card"><div class="gazebo-card-photo"><img src="assets/images/les-06.webp" alt="Интерьер беседки номер 2"></div><div class="gazebo-card-content"><div class="gazebo-card-head"><span>Беседка 02</span><strong>До 25 гостей</strong></div><h3>Для семейного дня</h3><p>Светлое пространство, где удобно собраться за одним столом с детьми и взрослыми.</p><div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div><p class="gazebo-inside"><b>Внутри:</b> столы, лавки, чайник и микроволновка</p><a href="tel:+73422030214">Узнать свободное время <b>→</b></a></div></article>
-        <article class="gazebo-card"><div class="gazebo-card-photo"><img src="assets/images/les-03.webp" alt="Тёплая беседка номер 3 зимой"></div><div class="gazebo-card-content"><div class="gazebo-card-head"><span>Беседка 03</span><strong>До 25 гостей</strong></div><h3>Для отдыха круглый год</h3><p>Тёплая беседка после лыж, коньков или зимней прогулки по Черняевскому лесу.</p><div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div><p class="gazebo-inside"><b>Внутри:</b> печь, столы, лавки и место для общей сервировки</p><a href="tel:+73422030214">Узнать свободное время <b>→</b></a></div></article>
-        <article class="gazebo-card"><div class="gazebo-card-photo"><img src="assets/images/les-01.webp" alt="Беседка номер 4 среди деревьев"></div><div class="gazebo-card-content"><div class="gazebo-card-head"><span>Беседка 04</span><strong>До 25 гостей</strong></div><h3>Для праздника в лесу</h3><p>Отдельная точка среди деревьев — для дня рождения, встречи друзей или корпоратива.</p><div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div><p class="gazebo-inside"><b>Внутри:</b> холодильник, раковина, чайник и микроволновка</p><a href="tel:+73422030214">Узнать свободное время <b>→</b></a></div></article>
-      </div>
-      <p class="gazebo-disclaimer">Комплектация конкретной беседки может отличаться — администратор уточнит детали при бронировании.</p>
-      <div class="gazebo-coming"><span>05–06</span><strong>Ещё 2 беседки — скоро открытие</strong><p>Следите за новостями комплекса или уточните дату у администратора.</p></div>
-    </section>
-
-    <section class="occasions section">
-      <div class="occasions-content"><p class="eyebrow">Повод найдётся</p><h2>Семьёй, с друзьями<br>или всей командой</h2><p>День рождения, семейный выходной, корпоратив или просто свободный день — формат выбираете вы.</p><a class="button button-accent" href="tel:+73422030214">Обсудить ваш день</a></div>
-      <div class="occasions-photo"><img src="assets/images/les-02.webp" alt="Вечер в комплексе отдыха ЛЕС"></div>
-    </section>
-
-    <section class="map-section section">
-      <div class="section-heading compact"><p class="eyebrow dark">Карта территории</p><h2>Всё рядом.<br>И всё — в лесу.</h2><p>Перед приездом администратор подскажет, где встретиться и какая зона подойдёт вашей компании.</p></div>
-      <div class="territory-map-wrap">
-        <div class="territory-map" aria-label="Схематичная карта комплекса">
-          <svg viewBox="0 0 900 560" role="img" aria-label="Схема зон комплекса ЛЕС">
-            <path class="map-contour" d="M34 462C121 428 152 355 211 331c73-30 132 14 197-7 80-26 91-101 164-135 88-41 171-15 288-118"/>
-            <path class="trail" d="M40 470 C180 410 160 300 310 292 S520 390 600 260 S745 170 850 75"/>
-            <path class="water" d="M580 430c55-58 150-47 184 9 26 43-14 80-94 78-81-2-128-42-90-87z"/>
-            <g class="map-trees"><g transform="translate(70 72)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(165 104) scale(.75)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(350 55) scale(.88)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(740 278)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(805 360) scale(.78)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g></g>
-          </svg>
-          <div class="map-point p1"><b>01</b><span>Вход</span></div><div class="map-point p2"><b>02</b><span>Беседки</span></div><div class="map-point p3"><b>03</b><span>Прокат STORM</span></div><div class="map-point p4"><b>04</b><span>Поле</span></div><div class="map-point p5"><b>05</b><span>Пруд / каток</span></div>
+      <div class="container">
+        <div class="hero-facts reveal">
+          <div><b>Для всей семьи</b><span>Уютно детям и взрослым</span></div>
+          <div><b>На природе</b><span>Лес, воздух и тишина</span></div>
+          <div><b>Круглый год</b><span>Летом и зимой есть чем заняться</span></div>
+          <div><b>В черте Перми</b><span>Не нужно уезжать из города</span></div>
         </div>
       </div>
     </section>
 
-    <section class="prices section" id="prices">
-      <div class="prices-intro"><p class="eyebrow dark">Цены</p><h2>Просто выбрать.<br>Легко собраться.</h2><p class="price-note">Актуальную стоимость и свободное время лучше уточнить перед бронированием.</p></div>
-      <div class="price-list"><div class="price-row"><span>Пн–Чт</span><p><strong>2 000 ₽</strong><small>/ час</small></p></div><div class="price-row"><span>Пт–Вс и праздники</span><p><strong>2 500 ₽</strong><small>/ час</small></p></div><div class="price-meta"><strong>До 25 гостей</strong><span>Оплата картой, наличными, QR-кодом или через СБП.</span></div><a class="button button-dark" href="tel:+73422030214">Узнать свободное время</a></div>
+    <!-- Чем заняться -->
+    <section class="section" id="activities">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Ваш день в лесу</p>
+          <h2>Приезжайте за своим отдыхом</h2>
+          <p>Не нужно выбирать между природой, движением и комфортом. Здесь всё становится частью одного дня.</p>
+        </div>
+        <div class="scenario-grid reveal">
+          <a class="scenario scenario-main" href="#gazebos">
+            <span class="scenario-media"><img src="assets/images/les-05.webp" width="1280" height="720" loading="lazy" alt="Беседка с открытой террасой"></span>
+            <span class="scenario-body"><small>Тепло в любую погоду</small><strong>Отдохнуть в беседке</strong></span>
+          </a>
+          <article class="scenario">
+            <span class="scenario-media"><img src="assets/images/les-hero.webp" width="405" height="720" loading="lazy" alt="Лесная поляна для отдыха с детьми"></span>
+            <span class="scenario-body"><small>Лес, поляна и свобода</small><strong>Приехать с детьми</strong></span>
+          </article>
+          <article class="scenario">
+            <span class="scenario-media"><img src="assets/images/les-01.webp" width="1280" height="720" loading="lazy" alt="Дорожки комплекса среди леса"></span>
+            <span class="scenario-body"><small>Летом и зимой</small><strong>Покататься и поиграть</strong></span>
+          </article>
+          <article class="scenario">
+            <span class="scenario-media"><img src="assets/images/les-04.webp" width="960" height="1280" loading="lazy" alt="Угощение для праздника в беседке"></span>
+            <span class="scenario-body"><small>До 25 человек</small><strong>Провести праздник</strong></span>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="reviews section">
-      <p class="eyebrow dark">Говорят гости</p><div class="review-score"><strong>4,5</strong><span>★★★★★<small>8 оценок на Яндекс Картах</small></span></div>
-      <div class="reviews-grid"><blockquote>«Удобная беседка с крытой зоной и открытой террасой с мангалом. Есть всё необходимое».<cite>Наталья</cite></blockquote><blockquote>«Чисто, комфортно и уютно. 18 человек разместились свободно».<cite>Светлана</cite></blockquote><blockquote>«С наступлением темноты включают красивую подсветку. Беседки супер».<cite>Александр</cite></blockquote></div>
+    <!-- Больше, чем беседки -->
+    <section class="section section--surface">
+      <div class="container more__inner">
+        <div class="more-photo reveal">
+          <img src="assets/images/les-02.webp" width="1280" height="960" loading="lazy" alt="Комплекс ЛЕС вечером в городской среде">
+          <span>Лес рядом.<br>Город тоже.</span>
+        </div>
+        <div class="more-content reveal">
+          <p class="eyebrow">Больше, чем беседки</p>
+          <h2>От утра до тёплого вечера</h2>
+          <p>Начните с прогулки, сыграйте в футбол, прокатитесь по лесным дорожкам. Дети успеют набегаться на поляне, а вечером вся компания соберётся за одним столом.</p>
+          <ul>
+            <li>Территория в Черняевском лесу</li>
+            <li>Активности для детей и взрослых</li>
+            <li>Тёплые беседки со своей террасой</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="faq section"><div><p class="eyebrow dark">Перед приездом</p><h2>Коротко<br>о важном</h2></div><div class="faq-list"><details><summary>Беседки работают зимой?<span>+</span></summary><p>Да, беседки тёплые и подходят для отдыха круглый год.</p></details><details><summary>Сколько человек помещается?<span>+</span></summary><p>До 25 гостей. Для большой компании лучше заранее обсудить размещение с администратором.</p></details><details><summary>Что есть в беседке?<span>+</span></summary><p>Раковина, холодильник, чайник, микроволновка, столы и лавки. Рядом — отдельная мангальная зона.</p></details><details><summary>Можно приехать с детьми?<span>+</span></summary><p>Да. Рядом лес и поляна, где детям удобно играть и гулять.</p></details></div></section>
+    <!-- Два сезона -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Два сезона — один ЛЕС</p>
+          <h2>Двигайтесь. Останавливайтесь. Возвращайтесь.</h2>
+        </div>
+        <div class="season-cards reveal">
+          <article class="season">
+            <img src="assets/images/les-01.webp" width="1280" height="720" loading="lazy" alt="Летние дорожки и беседки комплекса ЛЕС">
+            <small>Май — октябрь</small>
+            <h3>Летом</h3>
+            <p>Велосипеды, футбольное поле, прогулки, пруд и долгие вечера на террасе.</p>
+          </article>
+          <article class="season">
+            <img src="assets/images/les-03.webp" width="960" height="1280" loading="lazy" alt="Тёплая беседка зимой">
+            <small>Ноябрь — апрель</small>
+            <h3>Зимой</h3>
+            <p>Беговые лыжи, коньки, каток и тёплая беседка после прогулки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <section class="contacts section" id="contacts">
-      <div class="contact-main"><p class="eyebrow">Приезжайте в ЛЕС</p><h2>Ваш день<br>начинается здесь</h2><a class="big-phone" href="tel:+73422030214">+7 (342) 203-02-14</a><p class="contact-address">Пермь, шоссе Космонавтов, 158/4</p><p class="contact-description">За спорткомплексом им. Сухарева, у входа в Черняевский лес.</p><div class="contact-actions"><a class="button button-accent" href="tel:+73422030214">Позвонить и забронировать</a><a class="button button-ghost" target="_blank" rel="noopener" href="https://yandex.ru/maps/-/CTDtFB9d">Открыть маршрут</a></div></div>
-      <div class="contact-photo"><img src="assets/images/les-01.webp" alt="Дорожки и беседки комплекса ЛЕС"></div>
+    <!-- С детьми -->
+    <section class="section section--surface">
+      <div class="container family__inner">
+        <div class="family-text reveal">
+          <p class="eyebrow">С детьми</p>
+          <h2>Можно шуметь, бегать и исследовать</h2>
+          <p>Рядом лес и большая поляна — детям есть где двигаться, играть и придумывать свои маршруты. Взрослые остаются рядом, на тёплой террасе.</p>
+        </div>
+        <div class="family-photo reveal">
+          <img src="assets/images/les-hero.webp" width="405" height="720" loading="lazy" alt="Зелёная поляна и лес комплекса ЛЕС">
+        </div>
+        <blockquote class="family-quote reveal">«Рядом лес, есть поляна, где могут побегать дети»<cite>Отзыв гостя на Яндекс Картах</cite></blockquote>
+      </div>
+    </section>
+
+    <!-- Беседки -->
+    <section class="section" id="gazebos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Тёплые беседки</p>
+          <h2>Своя точка на карте ЛЕСа</h2>
+          <p>Закрытая тёплая зона, отдельная терраса и мангал. До 25 гостей — для семейного дня, праздника или встречи с друзьями.</p>
+        </div>
+        <div class="gazebo-cards reveal">
+          <article class="gazebo-card">
+            <div class="gazebo-card-photo"><img src="assets/images/les-05.webp" width="1280" height="720" loading="lazy" alt="Беседка номер 1 с открытой террасой"></div>
+            <div class="gazebo-card-content">
+              <div class="gazebo-card-head"><span>Беседка 01</span><strong>До 25 гостей</strong></div>
+              <h3>Для большой компании</h3>
+              <p>Тёплая закрытая зона и просторная терраса для долгого отдыха в лесу.</p>
+              <div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div>
+              <p class="gazebo-inside"><b>Внутри:</b> столы, лавки, раковина, холодильник и чайник</p>
+              <a href="tel:+73422030214">Узнать свободное время <b>→</b></a>
+            </div>
+          </article>
+          <article class="gazebo-card">
+            <div class="gazebo-card-photo"><img src="assets/images/les-06.webp" width="1280" height="960" loading="lazy" alt="Интерьер беседки номер 2"></div>
+            <div class="gazebo-card-content">
+              <div class="gazebo-card-head"><span>Беседка 02</span><strong>До 25 гостей</strong></div>
+              <h3>Для семейного дня</h3>
+              <p>Светлое пространство, где удобно собраться за одним столом с детьми и взрослыми.</p>
+              <div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div>
+              <p class="gazebo-inside"><b>Внутри:</b> столы, лавки, чайник и микроволновка</p>
+              <a href="tel:+73422030214">Узнать свободное время <b>→</b></a>
+            </div>
+          </article>
+          <article class="gazebo-card">
+            <div class="gazebo-card-photo"><img src="assets/images/les-03.webp" width="960" height="1280" loading="lazy" alt="Тёплая беседка номер 3 зимой"></div>
+            <div class="gazebo-card-content">
+              <div class="gazebo-card-head"><span>Беседка 03</span><strong>До 25 гостей</strong></div>
+              <h3>Для отдыха круглый год</h3>
+              <p>Тёплая беседка после лыж, коньков или зимней прогулки по Черняевскому лесу.</p>
+              <div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div>
+              <p class="gazebo-inside"><b>Внутри:</b> печь, столы, лавки и место для общей сервировки</p>
+              <a href="tel:+73422030214">Узнать свободное время <b>→</b></a>
+            </div>
+          </article>
+          <article class="gazebo-card">
+            <div class="gazebo-card-photo"><img src="assets/images/les-01.webp" width="1280" height="720" loading="lazy" alt="Беседка номер 4 среди деревьев"></div>
+            <div class="gazebo-card-content">
+              <div class="gazebo-card-head"><span>Беседка 04</span><strong>До 25 гостей</strong></div>
+              <h3>Для праздника в лесу</h3>
+              <p>Отдельная точка среди деревьев — для дня рождения, встречи друзей или корпоратива.</p>
+              <div class="gazebo-tags"><span>Тёплая</span><span>Терраса</span><span>Мангал</span></div>
+              <p class="gazebo-inside"><b>Внутри:</b> холодильник, раковина, чайник и микроволновка</p>
+              <a href="tel:+73422030214">Узнать свободное время <b>→</b></a>
+            </div>
+          </article>
+        </div>
+        <p class="gazebo-disclaimer">Комплектация конкретной беседки может отличаться — администратор уточнит детали при бронировании.</p>
+        <div class="gazebo-coming reveal">
+          <span>05–06</span>
+          <strong>Ещё 2 беседки — скоро открытие</strong>
+          <p>Следите за новостями комплекса или уточните дату у администратора.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Повод -->
+    <section class="section section--soft">
+      <div class="container occasions__inner reveal">
+        <div class="occasions-content">
+          <p class="eyebrow">Повод найдётся</p>
+          <h2>Семьёй, с друзьями или всей командой</h2>
+          <p>День рождения, семейный выходной, корпоратив или просто свободный день — формат выбираете вы.</p>
+          <a class="button button-primary" href="tel:+73422030214">Обсудить ваш день</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карта территории -->
+    <section class="section map-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Карта территории</p>
+          <h2>Всё рядом. И всё — в лесу.</h2>
+          <p>Перед приездом администратор подскажет, где встретиться и какая зона подойдёт вашей компании.</p>
+        </div>
+        <div class="territory-map-wrap reveal">
+          <div class="territory-map" aria-label="Схематичная карта комплекса">
+            <svg viewBox="0 0 900 560" role="img" aria-label="Схема зон комплекса ЛЕС">
+              <path class="map-contour" d="M34 462C121 428 152 355 211 331c73-30 132 14 197-7 80-26 91-101 164-135 88-41 171-15 288-118"/>
+              <path class="trail" d="M40 470 C180 410 160 300 310 292 S520 390 600 260 S745 170 850 75"/>
+              <path class="water" d="M580 430c55-58 150-47 184 9 26 43-14 80-94 78-81-2-128-42-90-87z"/>
+              <g class="map-trees"><g transform="translate(70 72)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(165 104) scale(.75)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(350 55) scale(.88)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(740 278)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g><g transform="translate(805 360) scale(.78)"><path d="M20 0 4 28h10L1 51h15v18h8V51h15L26 28h10z"/></g></g>
+            </svg>
+            <div class="map-point p1"><b>01</b><span>Вход</span></div>
+            <div class="map-point p2"><b>02</b><span>Беседки</span></div>
+            <div class="map-point p3"><b>03</b><span>Прокат STORM</span></div>
+            <div class="map-point p4"><b>04</b><span>Поле</span></div>
+            <div class="map-point p5"><b>05</b><span>Пруд / каток</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="section section--surface" id="prices">
+      <div class="container prices__inner">
+        <div class="prices-intro reveal">
+          <p class="eyebrow">Цены</p>
+          <h2>Просто выбрать. Легко собраться.</h2>
+          <p class="price-note">Актуальную стоимость и свободное время лучше уточнить перед бронированием.</p>
+        </div>
+        <div class="reveal">
+          <div class="price-list">
+            <div class="price-row"><span>Пн–Чт</span><p><strong>2 000 ₽</strong><small>/ час</small></p></div>
+            <div class="price-row"><span>Пт–Вс и праздники</span><p><strong>2 500 ₽</strong><small>/ час</small></p></div>
+          </div>
+          <div class="price-meta">
+            <strong>До 25 гостей</strong>
+            <span>Оплата картой, наличными, QR-кодом или через СБП.</span>
+          </div>
+          <a class="button button-primary" href="tel:+73422030214">Узнать свободное время</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Говорят гости</p>
+        <div class="review-score reveal">
+          <strong>4,5</strong>
+          <span>★★★★★<small>8 оценок на <a href="https://yandex.ru/maps/-/CTDtFB9d" target="_blank" rel="noopener">Яндекс Картах</a></small></span>
+        </div>
+        <div class="reviews-grid reveal">
+          <blockquote>«Удобная беседка с крытой зоной и открытой террасой с мангалом. Есть всё необходимое».<cite>Наталья</cite></blockquote>
+          <blockquote>«Чисто, комфортно и уютно. 18 человек разместились свободно».<cite>Светлана</cite></blockquote>
+          <blockquote>«С наступлением темноты включают красивую подсветку. Беседки супер».<cite>Александр</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--surface">
+      <div class="container faq__inner">
+        <div class="reveal">
+          <p class="eyebrow">Перед приездом</p>
+          <h2>Коротко о важном</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Беседки работают зимой?<span>+</span></summary>
+            <p>Да, беседки тёплые и подходят для отдыха круглый год.</p>
+          </details>
+          <details>
+            <summary>Сколько человек помещается?<span>+</span></summary>
+            <p>До 25 гостей. Для большой компании лучше заранее обсудить размещение с администратором.</p>
+          </details>
+          <details>
+            <summary>Что есть в беседке?<span>+</span></summary>
+            <p>Раковина, холодильник, чайник, микроволновка, столы и лавки. Рядом — отдельная мангальная зона.</p>
+          </details>
+          <details>
+            <summary>Можно приехать с детьми?<span>+</span></summary>
+            <p>Да. Рядом лес и поляна, где детям удобно играть и гулять.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section section--grass" id="contacts">
+      <div class="container contacts__inner">
+        <div class="contact-main reveal">
+          <p class="eyebrow">Приезжайте в ЛЕС</p>
+          <h2>Ваш день начинается здесь</h2>
+          <a class="big-phone" href="tel:+73422030214">+7 (342) 203-02-14</a>
+          <p class="contact-address">Пермь, шоссе Космонавтов, 158/4</p>
+          <p class="contact-description">За спорткомплексом им. Сухарева, у входа в Черняевский лес.</p>
+          <div class="actions">
+            <a class="button button-primary" href="tel:+73422030214">Позвонить и забронировать</a>
+            <a class="button button-ghost" target="_blank" rel="noopener" href="https://yandex.ru/maps/-/CTDtFB9d">Открыть маршрут</a>
+          </div>
+        </div>
+        <div class="contact-photo reveal">
+          <img src="assets/images/les-01.webp" width="1280" height="720" loading="lazy" alt="Дорожки и беседки комплекса ЛЕС">
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><a class="logo footer-logo" href="#top"><span>ЛЕС</span><small>комплекс отдыха</small></a><p>Отдых в Черняевском лесу круглый год</p><p>© 2026</p></footer>
+  <footer>
+    <div class="container">
+      <a class="logo footer-logo" href="#top"><span>ЛЕС</span><small>комплекс отдыха</small></a>
+      <p>Отдых в Черняевском лесу круглый год</p>
+      <p>© 2026</p>
+    </div>
+  </footer>
+
   <script src="assets/script.js"></script>
 </body>
 </html>
