@@ -234,14 +234,15 @@ mark {
 
 /* ---------- Hero ---------- */
 
+.hero .container { max-width: 1340px; }
 .hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 2fr);
   gap: var(--col-gap);
-  align-items: center;
-  padding-block: clamp(36px, 5vw, 76px) clamp(28px, 4vw, 52px);
+  align-items: stretch;
+  padding-block: clamp(32px, 4vw, 56px) clamp(36px, 5vw, 68px);
 }
-.hero-copy-panel { max-width: 32rem; }
+.hero-copy-panel { display: flex; flex-direction: column; max-width: 32rem; }
 .hero-kicker {
   display: flex;
   align-items: center;
@@ -252,9 +253,9 @@ mark {
   color: var(--grass-ink);
 }
 .hero-kicker span { width: 22px; height: 2px; border-radius: 2px; background: var(--grass); }
-.hero h1 { margin-bottom: 1.4rem; }
+.hero h1 { font-size: clamp(2.1rem, 3.3vw, 3.1rem); margin-bottom: 1.3rem; }
 .hero h1 em { font-style: normal; color: var(--grass-ink); box-shadow: inset 0 -0.26em 0 var(--grass-soft); }
-.hero-copy { font-size: 1.2rem; color: var(--muted); text-wrap: pretty; max-width: 30rem; }
+.hero-copy { font-size: 1.1rem; color: var(--muted); text-wrap: pretty; max-width: 28rem; }
 
 .hero-features {
   display: flex;
@@ -277,42 +278,47 @@ mark {
   flex: none;
 }
 
-.hero-visual { display: grid; gap: 12px; }
-.hero-main-image {
-  width: 100%;
-  aspect-ratio: 4 / 3.1;
-  object-fit: cover;
+.hero-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.hero-collage figure { margin: 0; border-radius: var(--r-sm); overflow: hidden; }
+.hero-collage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-collage figure:not(.hero-collage__main) { aspect-ratio: 1 / 1.18; }
+.hero-collage__main {
+  grid-column: 1 / -1;
+  position: relative;
+  height: clamp(300px, 48vh, 540px);
   border-radius: var(--r);
 }
-.hero-visual { position: relative; }
 .hero-place {
   position: absolute;
-  top: 16px;
   left: 16px;
+  bottom: 16px;
   display: flex;
   flex-direction: column;
-  padding: .55rem .9rem;
+  padding: .5rem .85rem;
   border-radius: 14px;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  background: color-mix(in srgb, var(--bg) 84%, transparent);
   backdrop-filter: blur(6px);
-  font-size: .78rem;
-  color: var(--muted);
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--ink);
 }
-.hero-place strong { font-size: .95rem; color: var(--ink); }
-.hero-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.hero-thumbs img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--r-sm); }
+.hero-place small { font-size: .72rem; font-weight: 500; color: var(--muted); }
 
 .hero-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.4rem 2.4rem;
-  margin-top: clamp(2rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem 1.6rem;
+  margin-top: auto;
   padding-top: 1.8rem;
   border-top: 1px solid var(--line);
 }
 .hero-facts > div { display: flex; flex-direction: column; }
-.hero-facts b { font-size: 1.02rem; font-weight: 700; letter-spacing: -0.02em; }
-.hero-facts span { font-size: .9rem; color: var(--muted); }
+.hero-facts b { font-size: .98rem; font-weight: 700; letter-spacing: -0.02em; }
+.hero-facts span { font-size: .86rem; color: var(--muted); line-height: 1.35; }
 
 /* ---------- Сценарии ---------- */
 
@@ -725,8 +731,10 @@ footer p { color: var(--muted); font-size: .9rem; }
   .prices__inner,
   .contacts__inner,
   .faq__inner { grid-template-columns: 1fr; }
-  .hero__inner { gap: 2.4rem; }
+  .hero__inner { gap: 2.4rem; padding-bottom: clamp(40px, 8vw, 64px); }
   .hero-copy-panel, .more-content, .family-text, .contact-main { max-width: none; }
+  .hero-facts { margin-top: 2.2rem; }
+  .hero-collage__main { height: clamp(240px, 44vh, 420px); }
 
   .season-cards { grid-template-columns: 1fr; }
   .gazebo-cards { grid-template-columns: 1fr; }
@@ -734,7 +742,8 @@ footer p { color: var(--muted); font-size: .9rem; }
 
 @media (max-width: 560px) {
   .scenario-grid { grid-template-columns: 1fr; }
-  .hero-thumbs { grid-template-columns: repeat(3, 1fr); }
+  .hero-collage { gap: 8px; }
+  .hero-collage__main { height: clamp(200px, 40vh, 320px); }
   .actions .button { flex: 1 1 100%; }
   .map-point span { display: none; }
   .territory-map { aspect-ratio: 4 / 5; }
